@@ -1,28 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.h                                        :+:      :+:    :+:   */
+/*   ft_putaddress.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: calvares <calvares@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/09 18:34:41 by calvares          #+#    #+#             */
-/*   Updated: 2025/11/10 00:28:11 by calvares         ###   ########.fr       */
+/*   Created: 2025/11/09 21:09:36 by calvares          #+#    #+#             */
+/*   Updated: 2025/11/10 00:22:06 by calvares         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_PRINTF_H
-# define FT_PRINTF_H
+#include "ft_printf.h"
 
-# include <stdarg.h>
-# include <unistd.h>
+int	ft_putaddress(unsigned long nb)
+{
+	int		re;
+	char	*base;
 
-//Functions used:
-int	ft_putstr(char *str);
-int	ft_putchar(char c);
-int	ft_putnbr(int nb);
-int	ft_putunbr(unsigned int nb);
-int	ft_puthexadecimal_lowercase(unsigned int nb);
-int	ft_puthexadecimal_uppercase(unsigned int nb);
-int	ft_putaddress(unsigned long nb);
+	re = 0;
+	base = "0123456789abcdef";
+	if (nb >= 16)
+	{
+		re += ft_putaddress(nb / 16);
+		re += ft_putaddress(nb % 16);
+	}
+	else
+		re += ft_putchar(base[nb % 16]);
+	return (re);
+}
 
-#endif
+/* int main(void)
+{
+	int a = 42;
+	int *p = &a;
+	
+	ft_putaddress((unsigned long) p); ft_putchar('\n');
+} */

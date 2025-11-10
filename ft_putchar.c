@@ -1,28 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.h                                        :+:      :+:    :+:   */
+/*   ft_putchar.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: calvares <calvares@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/09 18:34:41 by calvares          #+#    #+#             */
-/*   Updated: 2025/11/10 00:28:11 by calvares         ###   ########.fr       */
+/*   Created: 2025/11/09 20:33:17 by calvares          #+#    #+#             */
+/*   Updated: 2025/11/09 21:16:12 by calvares         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_PRINTF_H
-# define FT_PRINTF_H
+#include "ft_printf.h"
 
-# include <stdarg.h>
-# include <unistd.h>
-
-//Functions used:
-int	ft_putstr(char *str);
-int	ft_putchar(char c);
-int	ft_putnbr(int nb);
-int	ft_putunbr(unsigned int nb);
-int	ft_puthexadecimal_lowercase(unsigned int nb);
-int	ft_puthexadecimal_uppercase(unsigned int nb);
-int	ft_putaddress(unsigned long nb);
-
-#endif
+int	ft_putchar(char c)
+{
+	write(1, &c, 1);
+}

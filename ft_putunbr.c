@@ -1,28 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.h                                        :+:      :+:    :+:   */
+/*   ft_putunbr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: calvares <calvares@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/09 18:34:41 by calvares          #+#    #+#             */
-/*   Updated: 2025/11/10 00:28:11 by calvares         ###   ########.fr       */
+/*   Created: 2025/11/09 21:09:07 by calvares          #+#    #+#             */
+/*   Updated: 2025/11/09 22:07:55 by calvares         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_PRINTF_H
-# define FT_PRINTF_H
+#include "ft_printf.h"
 
-# include <stdarg.h>
-# include <unistd.h>
+int	ft_putunbr(unsigned int nb)
+{
+	unsigned int	re;
 
-//Functions used:
-int	ft_putstr(char *str);
-int	ft_putchar(char c);
-int	ft_putnbr(int nb);
-int	ft_putunbr(unsigned int nb);
-int	ft_puthexadecimal_lowercase(unsigned int nb);
-int	ft_puthexadecimal_uppercase(unsigned int nb);
-int	ft_putaddress(unsigned long nb);
+	re = 0;
+	if (nb > 9)
+	{
+		re += ft_putunbr(nb / 10);
+		re += ft_putunbr(nb % 10);
+	}
+	else
+		re += ft_putchar (nb + '0');
+	return (re);
+}
 
-#endif
+/* int	main(void)
+{
+	ft_putunbr(42); ft_putchar('\n');
+	ft_putunbr(0); ft_putchar('\n');
+	ft_putunbr(-2147483648); ft_putchar('\n');
+	ft_putunbr(4294967295); ft_putchar('\n');
+} */
