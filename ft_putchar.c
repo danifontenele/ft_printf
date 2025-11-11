@@ -6,7 +6,7 @@
 /*   By: calvares <calvares@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/09 20:33:17 by calvares          #+#    #+#             */
-/*   Updated: 2025/11/09 21:16:12 by calvares         ###   ########.fr       */
+/*   Updated: 2025/11/11 23:43:27 by calvares         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,9 @@
 
 int	ft_putchar(char c)
 {
-	write(1, &c, 1);
+	int	re;
+
+	re = 0;
+	re += write(1, &c, 1);
+	return (re);
 }

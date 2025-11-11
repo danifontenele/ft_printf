@@ -6,7 +6,7 @@
 /*   By: calvares <calvares@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/09 21:08:54 by calvares          #+#    #+#             */
-/*   Updated: 2025/11/09 23:33:07 by calvares         ###   ########.fr       */
+/*   Updated: 2025/11/11 23:08:38 by calvares         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,12 +20,8 @@ int	ft_puthexadecimal_lowercase(unsigned int nb)
 	re = 0;
 	base = "0123456789abcdef";
 	if (nb >= 16)
-	{
 		re += ft_puthexadecimal_lowercase(nb / 16);
-		re += ft_puthexadecimal_lowercase(nb % 16); 
-	}
-	else
-		re += ft_putchar(base[nb % 16]);
+	re += ft_putchar(base[nb % 16]);
 	return (re);
 }
 

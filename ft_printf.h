@@ -6,7 +6,7 @@
 /*   By: calvares <calvares@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/09 18:34:41 by calvares          #+#    #+#             */
-/*   Updated: 2025/11/10 00:28:11 by calvares         ###   ########.fr       */
+/*   Updated: 2025/11/11 23:22:06 by calvares         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 # include <stdarg.h>
 # include <unistd.h>
+# include <stdio.h>
 
 //Functions used:
 int	ft_putstr(char *str);
