@@ -6,7 +6,7 @@
 /*   By: calvares <calvares@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/09 18:34:41 by calvares          #+#    #+#             */
-/*   Updated: 2025/11/11 23:22:06 by calvares         ###   ########.fr       */
+/*   Updated: 2025/11/11 23:56:33 by calvares         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@
 # include <stdio.h>
 
 //Functions used:
+int	ft_printf(const char *format, ...);
 int	ft_putstr(char *str);
 int	ft_putchar(char c);
 int	ft_putnbr(int nb);

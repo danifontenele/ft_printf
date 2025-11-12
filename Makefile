@@ -6,13 +6,14 @@
 #    By: calvares <calvares@student.42lisboa.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/11/11 21:04:46 by calvares          #+#    #+#              #
-#    Updated: 2025/11/11 21:12:45 by calvares         ###   ########.fr        #
+#    Updated: 2025/11/11 23:57:07 by calvares         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME =		libftprintf.a
 SOURCE =	ft_putaddress.c ft_putchar.c ft_puthexadecimal_uppercase.c \
-			ft_puthexadecimal_lowercase.c ft_putnbr.c ft_putstr.c ft_putunbr.c
+			ft_puthexadecimal_lowercase.c ft_putnbr.c ft_putstr.c ft_putunbr.c\
+			ft_printf.c
 SRC =		$(SOURCE)
 OBJS =		$(SRC:.c=.o)
 CC =		cc
