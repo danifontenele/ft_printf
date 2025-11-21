@@ -6,7 +6,7 @@
 /*   By: calvares <calvares@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/08 20:50:01 by calvares          #+#    #+#             */
-/*   Updated: 2025/11/11 23:43:00 by calvares         ###   ########.fr       */
+/*   Updated: 2025/11/21 00:04:50 by calvares         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,32 +70,37 @@ int	ft_printf(const char *format, ...)
 	int *ptr = &x;
 	
 	ft_printf("Caso 1) format 's' e 'd':\n");
-	ft_printf("	Me chamo %s\n	Tenho %d anos.\n", "Carlos", 24);
-	ft_printf("Caso 2) format 'i', 'x' e 'X':\n");
-	ft_printf("	%i em hexadecimal maiusculo: %X\n", 42, 42);
-	ft_printf("	%i em hexadecimal minusculo: %x\n", 42, 42);
-	ft_printf("Caso 3) format como 'p':\n");
-	ft_printf("	O endereco de ptr e: %p\n", ptr);
-	ft_printf("	E um ponteiro NULL: %p\n", NULL);
-	ft_printf("Caso 4: format como 'u':\n");
-	ft_printf("	O numero %i unsigned seria: %u\n", -42, -42);
-	ft_printf("Caso 5) format desconhecido:\n");
-	ft_printf("	O formato %z e desconhecido\n");
-	ft_printf("Caso 6) format como '%':\n");
-	ft_printf("	%%\n");
-	ft_printf("Caso 7) format como 'c':\n");
-	ft_printf("	printando um caractere: %c", 'd');
-
-	printf("\nEsperado:\n");
-	printf("1) Me chamo %s\nTenho %d anos de idade\n", "Carlos", 24);
-	printf("2) %i em hexadecimal maiusculo: %X\n", 42, 42);
-	printf("2.2) %i em hexadecimal minusculo: %x\n", 42, 42);
-	printf("3) O endereco de ptr e: %p\n", ptr);
-	printf("3.2) E um ponteiro NULL: %p\n", NULL);
-	printf("4) O numero %i unsigned seria: %u\n", -42, -42);
-	printf("5) O formato %z e desconhecido\n");
-	printf("6) %%\n");
-	printf("7) printando um caractere: %c\n", 'd');
-	printf("\nRetorno ft_: %i\n", ft_printf("essa e uma string teste\n"));
-	ft_printf("Retorno original: %i\n", printf("essa e uma string teste\n"));
+	ft_printf("	ft_printf: 	Me chamo %s Tenho %d anos.\n", "Carlos", 24);
+	printf("	printf: 	Me chamo %s Tenho %d anos.\n", "Carlos", 24);
+	
+	ft_printf("\nCaso 2) format 'i', 'x' e 'X':\n");
+	ft_printf("	ft_printf: 	%i em hexadecimal maiusculo: %X\n", 42, 42);
+	printf("	printf: 	%i em hexadecimal maiusculo: %X\n", 42, 42);
+	ft_printf("	ft_printf: 	%i em hexadecimal minusculo: %x\n", 42, 42);
+	printf("	printf: 	%i em hexadecimal minusculo: %x\n", 42, 42);
+	
+	ft_printf("\nCaso 3) format como 'p':\n");
+	ft_printf("	ft_printf: 	O endereco de ptr e: %p\n", ptr);
+	printf("	printf: 	O endereco de ptr e: %p\n", ptr);
+	ft_printf("	ft_printf: 	E um ponteiro NULL: %p\n", NULL);
+	printf("	printf: 	E um ponteiro NULL: %p\n", NULL);
+	
+	ft_printf("\nCaso 4: format como 'u':\n");
+	ft_printf("	ft_printf: 	O numero %i unsigned seria: %u\n", -42, -42);
+	printf("	printf: 	O numero %i unsigned seria: %u\n", -42, -42);
+	
+	ft_printf("\nCaso 5) format como '%%':\n");
+	ft_printf("	ft_printf: 	%%\n");
+	printf("	printf: 	%%\n");
+	
+	ft_printf("\nCaso 6) format como 'c':\n");
+	ft_printf("	ft_printf:	printando um caractere: %c\n", 'd');
+	printf("	printf:		printando um caractere: %c\n", 'd');
+	
+	ft_printf("\nCaso 7) Retorno:\n");
+	int r;
+	r = printf("	essa e uma string teste\n");
+	printf("	Retorno printf: 	%i\n", r);
+	r = ft_printf("	essa e uma string teste\n");
+	ft_printf("	Retorno ft_printf: 	%i\n", r);
 } */
