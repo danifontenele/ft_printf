@@ -2,7 +2,7 @@
 
 In this project I implemented the function **printf**.
 
-Most of what the original printf do, this ft_printf also do.
+This function has the same behavior of the printf function for the format specifiers c, s, d, i, u, p, x, X and %.
 
 ## Why the f of the printf? This function write something, so why not to use only putstr?
 - The difference of this function to putstr is the fact that printf consider the **format identifiers**.
